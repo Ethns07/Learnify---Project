@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   return (
     <div className="container mt-5 pt-5" style={{ maxWidth: "400px" }}>
-      <h3 className="text-center mb-4">Login</h3>
+      <h3 className="text-center mb-4">Login Form</h3>
       <form onSubmit={handleLogin}>
         <div className="mb-3">
           <label className="form-label">Email address</label>
