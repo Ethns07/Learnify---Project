@@ -1,7 +1,14 @@
 import React from "react";
+import Navbar from "../components/NavBar.jsx";
 
-const registerPage = () => {
-  return <div></div>;
+const register = () => {
+  return (
+    <div>
+      <Navbar />
+
+      <h2>gsdjkhfsd</h2>
+    </div>
+  );
 };
 
-export default registerPage;
+export default register;
