@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBar.jsx";
-
+import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/homePage.jsx";
 import About from "./pages/aboutPage.jsx";
 import Courses from "./pages/coursesPage.jsx";
@@ -15,6 +14,7 @@ const App = () => {
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
