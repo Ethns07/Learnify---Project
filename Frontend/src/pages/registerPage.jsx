@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
+=======
+import Navbar from "../components/Navbar.jsx";
+
+>>>>>>> dd2eaa22100b05e1467785cbd98ed3326a40a639
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({

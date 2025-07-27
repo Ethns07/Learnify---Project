@@ -1,18 +1,12 @@
+import React from "react";
+import Navbar from "../components/NavBar.jsx";
+
 const coursesPage = () => {
   return (
-    <main>
-      <div>
-        <div className="container">
-          <input type="search" name="search" id="courseSearch" placeholder="Search a course" />
-        </div>
-        <div className="container">
-          <button className="btn btn-info align-content-center">
-            Add Course
-          </button>
-        </div>
-      </div>
-    </main>
+    <div>
+      <Navbar />
+    </div>
   );
 };
 
-export default coursesPage;
+export default Courses;
