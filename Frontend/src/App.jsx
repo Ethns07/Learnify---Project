@@ -10,7 +10,12 @@ import Contact from "./pages/contactPage.jsx";
 import Register from "./pages/registerPage.jsx";
 import Login from "./pages/loginPage.jsx";
 
+import { useState } from "react";
+import TechnicalSkillQuiz from "./components/TechnicalSkillQuiz/TechnicalSkillQuiz.jsx";
+
 const App = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -23,6 +28,14 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      {/* <br />
+      <br />
+      <div className="container mt-5">
+        <button className="btn btn-success" onClick={() => setOpen(true)}>
+          Enrollment Test
+        </button>
+        {open && <TechnicalSkillQuiz onClose={() => setOpen(false)} />}
+      </div> */}
     </>
   );
 };

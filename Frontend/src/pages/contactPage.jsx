@@ -4,7 +4,7 @@ import Navbar from "../components/NavBar.jsx";
 const contactPage = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
     </div>
   );
 };

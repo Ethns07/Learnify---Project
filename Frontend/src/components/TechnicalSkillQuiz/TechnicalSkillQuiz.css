@@ -1,0 +1,16 @@
+/* TechnicalSkillQuiz.css */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1055;
+}
+
+.list-group-item.active {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.card {
+  border-radius: 0.75rem;
+}

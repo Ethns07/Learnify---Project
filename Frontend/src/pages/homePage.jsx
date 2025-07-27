@@ -4,9 +4,18 @@ import Navbar from "../components/NavBar.jsx";
 const homePage = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <br />
-      <h2>asad</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h2 className="">Welcome to Learnify </h2>
     </div>
   );
 };
