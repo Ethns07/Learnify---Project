@@ -1,38 +1,26 @@
-// src/pages/Contact.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
 const contactPage = () => {
+=======
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+const Contact = () => {
+>>>>>>> 5db98e298bec7c29a4ef991df1e5c177d4e2421e
   return (
     <main className="main">
       <br />
-      {/* Page Title */}
-      <div className="page-title" data-aos="fade">
-        <div className="heading">
-          <div className="container">
-            <div className="row d-flex justify-content-center text-center">
-              <div className="col-lg-8">
-                <h1>Contact</h1>
-                <p className="mb-0">
-                  Odio et unde deleniti. Deserunt numquam exercitationem.
-                  Officiis quo odio sint voluptas consequatur ut a odio
-                  voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi
-                  ratione sint. Sit quaerat ipsum dolorem.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <nav className="breadcrumbs">
-          <div className="container">
-            <ol>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li className="current">Contact</li>
-            </ol>
-          </div>
-        </nav>
+     {/* Page Title */}
+      <div style={{ backgroundColor: "#092c77", padding: "40px 0", color: "#fff" }}>
+        <Container className="text-center">
+          <h2 className="mt-3">Contact</h2>
+          <p className="mb-3 mx-auto" style={{ maxWidth: "700px" }}>
+            Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint
+            voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores.
+            Quasi ratione sint. Sit quaerat ipsum dolorem.
+          </p>
+         
+        </Container>
       </div>
 
       {/* Contact Section */}
@@ -49,111 +37,67 @@ const contactPage = () => {
           ></iframe>
         </div>
 
-        <div className="container" data-aos="fade-up" data-aos-delay="100">
-          <div className="row gy-4">
-            {/* Contact Info */}
-            <div className="col-lg-4">
-              <div
-                className="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i className="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div>
-
-              <div
-                className="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i className="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div>
-
-              <div
-                className="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i className="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="col-lg-8">
-              <form
-                action="forms/contact.php"
-                method="post"
-                className="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div className="row gy-4">
-                  <div className="col-md-6">
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-
-                  <div className="col-md-6">
-                    <input
-                      type="email"
-                      name="email"
-                      className="form-control"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </div>
-
-                  <div className="col-md-12">
-                    <input
-                      type="text"
-                      name="subject"
-                      className="form-control"
-                      placeholder="Subject"
-                      required
-                    />
-                  </div>
-
-                  <div className="col-md-12">
-                    <textarea
-                      className="form-control"
-                      name="message"
-                      rows="6"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div className="col-md-12 text-center">
-                    <div className="loading">Loading</div>
-                    <div className="error-message"></div>
-                    <div className="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-                    <button type="submit">Send Message</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            {/* End Form */}
+    <section id="contact" className="py-5 bg-light">
+    <Container data-aos="fade-up" data-aos-delay="100">
+    <Row className="gy-4">
+      
+      {/* Contact Info */}
+      <Col lg={4}>
+        <div className="bg-white p-4 rounded shadow-sm mb-3 d-flex align-items-start">
+          <i className="bi bi-geo-alt fs-3 text-primary me-3"></i>
+          <div>
+            <h5 className="mb-1">Address</h5>
+            <p className="mb-0">A108 Adam Street, New York, NY 535022</p>
           </div>
         </div>
+
+        <div className="bg-white p-4 rounded shadow-sm mb-3 d-flex align-items-start">
+          <i className="bi bi-telephone fs-3 text-primary me-3"></i>
+          <div>
+            <h5 className="mb-1">Call Us</h5>
+            <p className="mb-0">+1 5589 55488 55</p>
+          </div>
+        </div>
+
+        <div className="bg-white p-4 rounded shadow-sm d-flex align-items-start">
+          <i className="bi bi-envelope fs-3 text-primary me-3"></i>
+          <div>
+            <h5 className="mb-1">Email Us</h5>
+            <p className="mb-0">info@example.com</p>
+          </div>
+        </div>
+      </Col>
+
+      {/* Contact Form */}
+      <Col lg={8}>
+        <Form className="bg-white p-4 rounded shadow-sm" data-aos="fade-up" data-aos-delay="200">
+          <Row className="gy-3">
+            <Col md={6}>
+              <Form.Control type="text" placeholder="Your Name" required />
+            </Col>
+            <Col md={6}>
+              <Form.Control type="email" placeholder="Your Email" required />
+            </Col>
+            <Col md={12}>
+              <Form.Control type="text" placeholder="Subject" required />
+            </Col>
+            <Col md={12}>
+              <Form.Control as="textarea" rows={5} placeholder="Message" required />
+            </Col>
+            <Col md={12} className="text-center">
+              <Button style={{backgroundColor:"#092c77"}} type="submit" className="px-4 py-2 rounded-pill">
+                Send Message
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+      </Col>
+    </Row>
+  </Container>
+</section>
+
+          <Navbar />
+      
       </section>
     </main>
   );

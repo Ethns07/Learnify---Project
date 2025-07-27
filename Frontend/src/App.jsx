@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/homePage.jsx";
 import About from "./pages/aboutPage.jsx";
@@ -8,16 +8,26 @@ import Trainers from "./pages/trainerPage.jsx";
 import Contact from "./pages/contactPage.jsx";
 import Register from "./pages/registerPage.jsx";
 import Login from "./pages/loginPage.jsx";
+import Footer from "./components/Footer.jsx";
+
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { useState } from "react";
 import TechnicalSkillQuiz from "./components/TechnicalSkillQuiz/TechnicalSkillQuiz.jsx";
 
 const App = () => {
+<<<<<<< HEAD
   const [open, setOpen] = useState(false);
+=======
+  const location = useLocation();
+  const hideFooterRoutes = ["/login", "/register"];
+  const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
+>>>>>>> 5db98e298bec7c29a4ef991df1e5c177d4e2421e
 
   return (
     <>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -28,6 +38,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+<<<<<<< HEAD
       {/* <br />
       <br />
       <div className="container mt-5">
@@ -36,6 +47,11 @@ const App = () => {
         </button>
         {open && <TechnicalSkillQuiz onClose={() => setOpen(false)} />}
       </div> */}
+=======
+
+      {/* Show footer only on specific routes */}
+      {!shouldHideFooter && <Footer />}
+>>>>>>> 5db98e298bec7c29a4ef991df1e5c177d4e2421e
     </>
   );
 };
