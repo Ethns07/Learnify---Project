@@ -1,13 +1,8 @@
 // src/pages/About.jsx
 import React from "react";
-import Navbar from "../components/Navbar.jsx";
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
 const aboutPage = () => {
-  return <div>{/* <Navbar /> */}</div>;
-=======
-const About = () => {
   return (
     <main className="main">
       <br />
@@ -172,7 +167,6 @@ const About = () => {
       </section>
     </main>
   );
->>>>>>> dd2eaa22100b05e1467785cbd98ed3326a40a639
 };
 
-export default About;
+export default aboutPage;

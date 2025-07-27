@@ -1,27 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Navbar from "../components/Navbar.jsx";
 import heroBg from "../assets/img/hero-bg.jpeg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      {/* <Navbar /> */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h2 className="">Welcome to Learnify </h2>
-    </div>
-=======
     <>
       <Navbar />
       <main className="main">
@@ -238,7 +221,6 @@ const Home = () => {
         </section>
       </main>
     </>
->>>>>>> dd2eaa22100b05e1467785cbd98ed3326a40a639
   );
 };
 

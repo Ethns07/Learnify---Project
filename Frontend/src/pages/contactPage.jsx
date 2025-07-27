@@ -1,15 +1,9 @@
 // src/pages/Contact.jsx
 import React from "react";
-import Navbar from "../components/Navbar.jsx";
 import { Link } from "react-router-dom";
 
-const Contact = () => {
+const contactPage = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      {/* <Navbar /> */}
-    </div>
-=======
     <main className="main">
       <br />
       {/* Page Title */}
@@ -159,12 +153,10 @@ const Contact = () => {
             </div>
             {/* End Form */}
           </div>
-          <Navbar />
         </div>
       </section>
     </main>
->>>>>>> dd2eaa22100b05e1467785cbd98ed3326a40a639
   );
 };
 
-export default Contact;
+export default contactPage;

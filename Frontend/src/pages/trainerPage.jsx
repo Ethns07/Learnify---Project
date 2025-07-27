@@ -1,12 +1,7 @@
 // src/pages/Trainers.jsx
 import React from "react";
-import Navbar from "../components/Navbar.jsx";
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
-const trainerPage = () => {
-  return <div>{/* <Navbar /> */}</div>;
-=======
 const trainersData = [
   {
     name: "Walter White",
@@ -58,7 +53,7 @@ const trainersData = [
   },
 ];
 
-const Trainers = () => {
+const trainerPage = () => {
   return (
     <main className="main">
       <br />
@@ -136,7 +131,6 @@ const Trainers = () => {
       </section>
     </main>
   );
->>>>>>> dd2eaa22100b05e1467785cbd98ed3326a40a639
 };
 
-export default Trainers;
+export default trainerPage;
