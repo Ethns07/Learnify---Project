@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-=======
 import { Card, Container, Row, Col } from "react-bootstrap";
-import Navbar from "../components/Navbar.jsx";
->>>>>>> 5db98e298bec7c29a4ef991df1e5c177d4e2421e
 import { Link } from "react-router-dom";
 import amandajepsonImg from "../assets/trainer/amandajepson.jpg";
 import walterwhiteImg from "../assets/trainer/walterwhite.jpg";

@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const contactPage = () => {
-=======
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-const Contact = () => {
->>>>>>> 5db98e298bec7c29a4ef991df1e5c177d4e2421e
+
   return (
     <main className="main">
       <br />
