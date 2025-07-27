@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/homePage.jsx";
 import About from "./pages/aboutPage.jsx";
@@ -8,11 +8,19 @@ import Trainers from "./pages/trainerPage.jsx";
 import Contact from "./pages/contactPage.jsx";
 import Register from "./pages/registerPage.jsx";
 import Login from "./pages/loginPage.jsx";
+import Footer from "./components/Footer.jsx";
+
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const App = () => {
+  const location = useLocation();
+  const hideFooterRoutes = ["/login", "/register"];
+  const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
+
   return (
     <>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -23,6 +31,9 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+
+      {/* Show footer only on specific routes */}
+      {!shouldHideFooter && <Footer />}
     </>
   );
 };

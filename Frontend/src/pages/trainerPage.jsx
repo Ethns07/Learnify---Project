@@ -1,136 +1,206 @@
-// src/pages/Trainers.jsx
 import React from "react";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import Navbar from "../components/Navbar.jsx";
 import { Link } from "react-router-dom";
+import amandajepsonImg from "../assets/trainer/amandajepson.jpg";
+import walterwhiteImg from "../assets/trainer/walterwhite.jpg";
+import sarahjhonsonImg from "../assets/trainer/sarahjhonson.jpg";
+import williamandersonImg from "../assets/trainer/williamanderson.jpg";
+import briandoneImg from "../assets/trainer/briandone.jpg";
+import josephapalasImg from "../assets/trainer/josephapalas.jpg";
 
-const trainersData = [
-  {
-    name: "Walter White",
-    subject: "Business",
-    description:
-      "Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow",
-    image: "/assets/img/team/team-1.jpg",
-    delay: 100,
-  },
-  {
-    name: "Sarah Jhonson",
-    subject: "Marketing",
-    description:
-      "Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut",
-    image: "/assets/img/team/team-2.jpg",
-    delay: 200,
-  },
-  {
-    name: "William Anderson",
-    subject: "Maths",
-    description:
-      "Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui",
-    image: "/assets/img/team/team-3.jpg",
-    delay: 300,
-  },
-  {
-    name: "Amanda Jepson",
-    subject: "Foreign Languages",
-    description:
-      "Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi quam consectetur",
-    image: "/assets/img/team/team-4.jpg",
-    delay: 400,
-  },
-  {
-    name: "Brian Doe",
-    subject: "Web Development",
-    description:
-      "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit",
-    image: "/assets/img/team/team-5.jpg",
-    delay: 500,
-  },
-  {
-    name: "Josepha Palas",
-    subject: "Business",
-    description:
-      "Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit eligendi cupiditate vel",
-    image: "/assets/img/team/team-6.jpg",
-    delay: 600,
-  },
-];
 
 const Trainers = () => {
   return (
-    <main className="main">
-      <br />
-      {/* Page Title */}
-      <div className="page-title" data-aos="fade">
-        <div className="heading">
-          <div className="container">
-            <div className="row d-flex justify-content-center text-center">
-              <div className="col-lg-8">
-                <h1>Trainers</h1>
-                <p className="mb-0">
-                  Odio et unde deleniti. Deserunt numquam exercitationem.
-                  Officiis quo odio sint voluptas consequatur ut a odio
-                  voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi
-                  ratione sint. Sit quaerat ipsum dolorem.
-                </p>
-              </div>
-            </div>
-          </div>
+    <>
+    <Navbar/>
+      <main className="main">
+        <br />
+        {/* Page Title */}
+        <div style={{ backgroundColor: "#092c77", padding: "40px 0", color: "#fff" }}>
+          <Container className="text-center">
+            <h2 style={{ marginTop: "20px" }}>Trainers</h2>
+            <p className="mb-0" style={{ maxWidth: "700px", margin: "0 auto" }}>
+              Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint
+              voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores.
+              Quasi ratione sint. Sit quaerat ipsum dolorem.
+            </p>
+            
+          </Container>
         </div>
-        <nav className="breadcrumbs">
-          <div className="container">
-            <ol>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li className="current">Trainers</li>
-            </ol>
-          </div>
-        </nav>
-      </div>
 
-      {/* Trainers Section */}
-      <section id="trainers" className="section trainers">
-        <div className="container">
-          <div className="row gy-5">
-            {trainersData.map((trainer, index) => (
-              <div
-                className="col-lg-4 col-md-6 member"
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={trainer.delay}
-              >
-                <div className="member-img">
-                  <img
-                    src={trainer.image}
-                    className="img-fluid"
-                    alt={trainer.name}
-                  />
-                  <div className="social">
-                    <a href="#">
-                      <i className="bi bi-twitter-x"></i>
-                    </a>
-                    <a href="#">
-                      <i className="bi bi-facebook"></i>
-                    </a>
-                    <a href="#">
-                      <i className="bi bi-instagram"></i>
-                    </a>
-                    <a href="#">
-                      <i className="bi bi-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-                <div className="member-info text-center">
-                  <h4>{trainer.name}</h4>
-                  <span>{trainer.subject}</span>
-                  <p>{trainer.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <Navbar />
-        </div>
-      </section>
-    </main>
+        {/* Trainers Section */}
+       <section className="py-5 bg-light">
+  <Container>
+    <Row className="gy-4">
+      <Col md={4}>
+        <Card className="text-center h-100 shadow-sm border-0">
+          <Card.Img
+            variant="top"
+            src={walterwhiteImg}
+            alt="Walter White"
+              className="img-fluid rounded-circle mx-auto mt-4"
+            style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          />
+          <Card.Body>
+            <h5 className="fw-bold">Walter White</h5>
+            <small className="text-muted d-block mb-2">Web Development</small>
+            <p className="text-muted small mb-0">
+              Explicabo voluptatem mollitia et repellat qui dolorum quasi.
+            </p>
+          </Card.Body>
+          <Card.Footer className="bg-white border-0">
+            <div className="d-flex justify-content-center gap-3 fs-5">
+              <i className="bi bi-twitter"></i>
+              <i className="bi bi-facebook"></i>
+              <i className="bi bi-instagram"></i>
+              <i className="bi bi-linkedin"></i>
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+
+      <Col md={4}>
+        <Card className="text-center h-100 shadow-sm border-0">
+          <Card.Img
+            variant="top"
+            src={sarahjhonsonImg}
+            alt="Sarah Jhonson"
+          className="img-fluid rounded-circle mx-auto mt-4"
+            style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          />
+          <Card.Body>
+            <h5 className="fw-bold">Sarah Jhonson</h5>
+            <small className="text-muted d-block mb-2">Marketing</small>
+            <p className="text-muted small mb-0">
+              Aut maiores voluptates amet et quis praesentium qui senda para.
+            </p>
+          </Card.Body>
+          <Card.Footer className="bg-white border-0">
+            <div className="d-flex justify-content-center gap-3 fs-5">
+              <i className="bi bi-twitter"></i>
+              <i className="bi bi-facebook"></i>
+              <i className="bi bi-instagram"></i>
+              <i className="bi bi-linkedin"></i>
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+
+      <Col md={4}>
+        <Card className="text-center h-100 shadow-sm border-0">
+          <Card.Img
+            variant="top"
+            src={williamandersonImg}
+            alt="William Anderson"
+           className="img-fluid rounded-circle mx-auto mt-4"
+            style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          />
+          <Card.Body>
+            <h5 className="fw-bold">William Anderson</h5>
+            <small className="text-muted d-block mb-2">Content</small>
+            <p className="text-muted small mb-0">
+              Quisquam facilis cum velit laborum corrupti fuga rerum quia.
+            </p>
+          </Card.Body>
+          <Card.Footer className="bg-white border-0">
+            <div className="d-flex justify-content-center gap-3 fs-5">
+              <i className="bi bi-twitter"></i>
+              <i className="bi bi-facebook"></i>
+              <i className="bi bi-instagram"></i>
+              <i className="bi bi-linkedin"></i>
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+    </Row>
+    <br /><br />
+    <Row className="gy-4">
+      <Col md={4}>
+        <Card className="text-center h-100 shadow-sm border-0">
+          <Card.Img
+            variant="top"
+            src={amandajepsonImg}
+            alt="Amanda Jepson"
+           className="img-fluid rounded-circle mx-auto mt-4"
+            style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          />
+          <Card.Body>
+            <h5 className="fw-bold">Walter White</h5>
+            <small className="text-muted d-block mb-2">Web Development</small>
+            <p className="text-muted small mb-0">
+              Explicabo voluptatem mollitia et repellat qui dolorum quasi.
+            </p>
+          </Card.Body>
+          <Card.Footer className="bg-white border-0">
+            <div className="d-flex justify-content-center gap-3 fs-5">
+              <i className="bi bi-twitter"></i>
+              <i className="bi bi-facebook"></i>
+              <i className="bi bi-instagram"></i>
+              <i className="bi bi-linkedin"></i>
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+
+      <Col md={4}>
+        <Card className="text-center h-100 shadow-sm border-0">
+          <Card.Img
+            variant="top"
+            src={briandoneImg}
+            alt="Brian Done"
+           className="img-fluid rounded-circle mx-auto mt-4"
+            style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          />
+          <Card.Body>
+            <h5 className="fw-bold">Sarah Jhonson</h5>
+            <small className="text-muted d-block mb-2">Marketing</small>
+            <p className="text-muted small mb-0">
+              Aut maiores voluptates amet et quis praesentium qui senda para.
+            </p>
+          </Card.Body>
+          <Card.Footer className="bg-white border-0">
+            <div className="d-flex justify-content-center gap-3 fs-5">
+              <i className="bi bi-twitter"></i>
+              <i className="bi bi-facebook"></i>
+              <i className="bi bi-instagram"></i>
+              <i className="bi bi-linkedin"></i>
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+
+      <Col md={4}>
+        <Card className="text-center h-100 shadow-sm border-0">
+          <Card.Img
+            variant="top"
+            src={josephapalasImg}
+            alt="Josepha Palas"
+           className="img-fluid rounded-circle mx-auto mt-4"
+            style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          />
+          <Card.Body>
+            <h5 className="fw-bold">William Anderson</h5>
+            <small className="text-muted d-block mb-2">Content</small>
+            <p className="text-muted small mb-0">
+              Quisquam facilis cum velit laborum corrupti fuga rerum quia.
+            </p>
+          </Card.Body>
+          <Card.Footer className="bg-white border-0">
+            <div className="d-flex justify-content-center gap-3 fs-5">
+              <i className="bi bi-twitter"></i>
+              <i className="bi bi-facebook"></i>
+              <i className="bi bi-instagram"></i>
+              <i className="bi bi-linkedin"></i>
+            </div>
+          </Card.Footer>
+        </Card>
+      </Col>
+    </Row>
+  </Container>
+</section>
+      </main>
+    </>
   );
 };
 
